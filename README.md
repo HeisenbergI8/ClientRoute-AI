@@ -6,13 +6,13 @@
 
 ClientRoute AI automates the triage and initial response generation for incoming enquiries at Strata Business Brokers — a specialist brokerage for buying and selling strata management businesses. Staff submit enquiries through a web interface; the AI returns a structured classification with confidence scoring, a suggested client response, and a recommended staff action — eliminating manual routing and reducing first-response time.
 
-**Core workflow**: Web form → Zod validation → OpenAI classification → Structured result → Staff action
+**Core workflow**: Web form → Zod validation → Groq classification → Structured result → Staff action
 
 ## Quick Start
 
 ```bash
 npm install
-cp .env.example .env.local   # Add your OPENAI_API_KEY
+cp .env.example .env.local   # Add your GROQ_API_KEY
 npm run dev
 ```
 
@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) and use the **Try an example
 
 | Variable         | Required | Description                             |
 | ---------------- | -------- | --------------------------------------- |
-| `OPENAI_API_KEY` | Yes      | OpenAI API key — platform.openai.com    |
+| `OPENAI_API_KEY` | Yes      | Groq API key — console.groq.com         |
 | `OPENAI_MODEL`   | No       | Override model (default: `gpt-4o-mini`) |
 
 ## Enquiry Types
@@ -78,7 +78,7 @@ src/
 
 ```
 EnquiryForm → POST /api/classify → Zod validate input
-  → classifyEnquiry() → OpenAI GPT-4o-mini (temp: 0.1)
+  → classifyEnquiry() → Groq API (gpt-4o-mini, temp: 0.1)
   → JSON.parse() → ClassificationResultSchema.safeParse()
   → success: return data | failure: retry (×2, 500ms backoff) → FALLBACK_CLASSIFICATION
 ```
@@ -229,6 +229,6 @@ const ratelimit = new Ratelimit({
 | Framework  | Next.js 15 (App Router) |
 | Language   | TypeScript (strict)     |
 | Styling    | Tailwind CSS 3          |
-| AI         | OpenAI GPT-4o-mini      |
+| AI         | Groq API (gpt-4o-mini)  |
 | Validation | Zod 3                   |
 | Testing    | Jest + ts-jest          |
