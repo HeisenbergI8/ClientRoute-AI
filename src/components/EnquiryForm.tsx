@@ -14,32 +14,32 @@ const EMPTY_FORM: FormFields = { name: "", email: "", message: "" };
 
 const EXAMPLE_ENQUIRIES: Array<{ label: string } & FormFields> = [
   {
-    label: "New Client",
-    name: "Emily Chen",
-    email: "emily.chen@example.com",
+    label: "Sell Inquiry",
+    name: "David Nguyen",
+    email: "david.nguyen@example.com",
     message:
-      "Hi, I recently purchased a unit at Riverside Gardens and I'm looking to engage your firm for strata management services. Could you please let me know about your management packages and fees?",
+      "Hi, I own a strata management company in Brisbane managing around 1,200 lots across 18 buildings. I've been running the business for 12 years and I'm starting to think about an exit in the next 12–18 months. I'd love to understand what the process looks like and what my business might be worth.",
   },
   {
-    label: "Complaint",
-    name: "Marcus Webb",
-    email: "m.webb@example.com",
+    label: "Buy Inquiry",
+    name: "Priya Sharma",
+    email: "priya.sharma@example.com",
     message:
-      "I'm extremely frustrated with the ongoing noise issues from the unit above me. I've raised this multiple times over the past three months and nothing has been done. This is completely unacceptable and I need this resolved immediately.",
+      "I'm a property professional looking to acquire a strata management business in Sydney or Melbourne. I have capital ready and am looking for a portfolio of at least 500 lots. Can you tell me what opportunities you currently have available and how your acquisition process works?",
   },
   {
-    label: "Billing Question",
-    name: "Sandra Liu",
-    email: "sandra.liu@example.com",
+    label: "Valuation Request",
+    name: "James Thornton",
+    email: "j.thornton@example.com",
     message:
-      "I received my quarterly levy notice for $1,840 but it's significantly higher than last quarter. Could you please explain the increase and provide a breakdown of the additional charges?",
+      "I run a strata management firm in Perth with approximately 800 lots under management. I'm not actively looking to sell yet but I'd like to get a sense of what the business is currently worth. Is a formal valuation something you can help with?",
   },
   {
     label: "Escalation",
-    name: "Robert Hastings",
-    email: "r.hastings@example.com",
+    name: "Catherine Mills",
+    email: "c.mills@lawfirm.com.au",
     message:
-      "Our building has had water ingress for over six months causing significant damage to multiple units. We have engaged a solicitor and will be seeking legal action unless emergency repairs are completed within 7 days. This is your formal notice.",
+      "I am a solicitor acting on behalf of a client regarding a confidential strata business transaction that was previously discussed with one of your brokers. There are serious concerns about the accuracy of information provided during the sale process and we require an urgent response within 48 hours before we proceed further.",
   },
 ];
 

@@ -3,10 +3,11 @@ import { z } from "zod";
 // ─── Enquiry Type Taxonomy ────────────────────────────────────────────────────
 
 export const EnquiryTypeSchema = z.enum([
-  "New Client",
-  "Support Request",
-  "Complaint",
-  "Billing Question",
+  "Sell Inquiry",
+  "Buy Inquiry",
+  "Valuation Request",
+  "Process / Fees Enquiry",
+  "Out of Scope",
   "General Enquiry",
   "Escalation",
   "Spam / Invalid Input",

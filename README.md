@@ -1,10 +1,10 @@
 # ClientRoute AI
 
-> AI-powered enquiry classification and response assistant for Strata Management Consultants.
+> AI-powered enquiry classification and response assistant for Strata Business Brokers.
 
 ## Overview
 
-ClientRoute AI automates the triage and initial response generation for incoming client enquiries. Staff submit enquiries through a web interface; the AI returns a structured classification with confidence scoring, a suggested client response, and a recommended staff action — eliminating manual routing and reducing first-response time.
+ClientRoute AI automates the triage and initial response generation for incoming enquiries at Strata Business Brokers — a specialist brokerage for buying and selling strata management businesses. Staff submit enquiries through a web interface; the AI returns a structured classification with confidence scoring, a suggested client response, and a recommended staff action — eliminating manual routing and reducing first-response time.
 
 **Core workflow**: Web form → Zod validation → OpenAI classification → Structured result → Staff action
 
@@ -27,15 +27,16 @@ Open [http://localhost:3000](http://localhost:3000) and use the **Try an example
 
 ## Enquiry Types
 
-| Type                 | Description                              |
-| -------------------- | ---------------------------------------- |
-| New Client           | First-time contact, onboarding inquiries |
-| Support Request      | Existing client operational help         |
-| Complaint            | Dissatisfaction or negative experience   |
-| Billing Question     | Invoice, payment, financial queries      |
-| General Enquiry      | Miscellaneous informational questions    |
-| Escalation           | Urgent, legal, or regulatory matters     |
-| Spam / Invalid Input | Nonsense or irrelevant content           |
+| Type                   | Description                                                |
+| ---------------------- | ---------------------------------------------------------- |
+| Sell Inquiry           | Strata business owner wanting to sell their business       |
+| Buy Inquiry            | Prospective buyer wanting to acquire a strata business     |
+| Valuation Request      | Owner asking what their strata business is worth           |
+| Process / Fees Enquiry | Questions about brokerage process, timeline, or fees       |
+| Out of Scope           | Business type we don't broker (non-strata businesses)      |
+| General Enquiry        | Miscellaneous questions about strata business transactions |
+| Escalation             | Urgent, legal, confidentiality, or media matters           |
+| Spam / Invalid Input   | Nonsense or irrelevant content                             |
 
 ## Commands
 

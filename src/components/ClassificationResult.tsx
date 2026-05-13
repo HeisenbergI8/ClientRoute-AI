@@ -22,10 +22,11 @@ function confidenceLabel(score: number): string {
 }
 
 const TYPE_BADGE: Record<string, string> = {
-  "New Client": "bg-blue-100 text-blue-800 border-blue-200",
-  "Support Request": "bg-purple-100 text-purple-800 border-purple-200",
-  Complaint: "bg-orange-100 text-orange-800 border-orange-200",
-  "Billing Question": "bg-yellow-100 text-yellow-800 border-yellow-200",
+  "Sell Inquiry": "bg-blue-100 text-blue-800 border-blue-200",
+  "Buy Inquiry": "bg-green-100 text-green-800 border-green-200",
+  "Valuation Request": "bg-purple-100 text-purple-800 border-purple-200",
+  "Process / Fees Enquiry": "bg-yellow-100 text-yellow-800 border-yellow-200",
+  "Out of Scope": "bg-orange-100 text-orange-800 border-orange-200",
   "General Enquiry": "bg-gray-100 text-gray-700 border-gray-200",
   Escalation: "bg-red-100 text-red-800 border-red-200",
   "Spam / Invalid Input": "bg-gray-100 text-gray-500 border-gray-200",

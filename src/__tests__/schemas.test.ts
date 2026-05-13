@@ -9,7 +9,7 @@ describe("EnquiryInputSchema", () => {
       name: "Sarah Johnson",
       email: "sarah@example.com",
       message:
-        "I would like to know more about your strata management services.",
+        "I would like to know more about selling my strata management business.",
     });
     expect(result.success).toBe(true);
   });
@@ -54,13 +54,13 @@ describe("EnquiryInputSchema", () => {
     const result = EnquiryInputSchema.safeParse({
       name: "  Sarah Johnson  ",
       email: "sarah@example.com",
-      message: "  I have a billing question about my levy notice.  ",
+      message: "  I have a question about selling my strata business.  ",
     });
     expect(result.success).toBe(true);
     if (result.success) {
       expect(result.data.name).toBe("Sarah Johnson");
       expect(result.data.message).toBe(
-        "I have a billing question about my levy notice.",
+        "I have a question about selling my strata business.",
       );
     }
   });
@@ -68,10 +68,12 @@ describe("EnquiryInputSchema", () => {
 
 describe("ClassificationResultSchema", () => {
   const validResult = {
-    enquiryType: "Billing Question",
+    enquiryType: "Sell Inquiry",
     confidenceScore: 85,
-    suggestedResponse: "Thank you for your enquiry regarding your levy notice.",
-    recommendedAction: "Forward to the accounts team for review.",
+    suggestedResponse:
+      "Thank you for your enquiry about selling your strata management business.",
+    recommendedAction:
+      "Contact the client to schedule an initial consultation.",
     isLowConfidence: false,
     requiresEscalation: false,
   };

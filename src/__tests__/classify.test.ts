@@ -22,14 +22,16 @@ const VALID_INPUT: EnquiryInput = {
   name: "Sarah Johnson",
   email: "sarah@example.com",
   message:
-    "I received an incorrect levy notice and need help disputing the amount charged.",
+    "I own a strata management company with 800 lots and I'm considering selling. What's the process?",
 };
 
 const VALID_AI_RESPONSE = {
-  enquiryType: "Billing Question",
+  enquiryType: "Sell Inquiry",
   confidenceScore: 88,
-  suggestedResponse: "Thank you for contacting us regarding your levy notice.",
-  recommendedAction: "Forward to accounts team for levy review.",
+  suggestedResponse:
+    "Thank you for reaching out about selling your strata management business.",
+  recommendedAction:
+    "Schedule an initial confidential consultation with the client.",
   isLowConfidence: false,
   requiresEscalation: false,
 };
@@ -43,7 +45,7 @@ describe("classifyEnquiry", () => {
     const { data, usedFallback } = await classifyEnquiry(VALID_INPUT);
 
     expect(usedFallback).toBe(false);
-    expect(data.enquiryType).toBe("Billing Question");
+    expect(data.enquiryType).toBe("Sell Inquiry");
     expect(data.confidenceScore).toBe(88);
   });
 
@@ -99,7 +101,7 @@ describe("classifyEnquiry", () => {
 
     expect(usedFallback).toBe(false);
     expect(mockCreate).toHaveBeenCalledTimes(2);
-    expect(data.enquiryType).toBe("Billing Question");
+    expect(data.enquiryType).toBe("Sell Inquiry");
   });
 
   it("fallback has confidenceScore of 0", () => {

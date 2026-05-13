@@ -1,9 +1,10 @@
 // Canonical enquiry type taxonomy — used by AI, Zod, and UI
 export type EnquiryType =
-  | "New Client"
-  | "Support Request"
-  | "Complaint"
-  | "Billing Question"
+  | "Sell Inquiry"
+  | "Buy Inquiry"
+  | "Valuation Request"
+  | "Process / Fees Enquiry"
+  | "Out of Scope"
   | "General Enquiry"
   | "Escalation"
   | "Spam / Invalid Input";
